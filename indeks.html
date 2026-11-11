@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINA DENTAL — Инновационная стоматология премиум-класса</title>
+    
+    <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            50: '#f4f8fa',
+                            100: '#e5eff4',
+                            200: '#cfe2ed',
+                            500: '#0ea5e9',
+                            800: '#1e40af',
+                            900: '#0f2c59',
+                            dark: '#081730'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Cormorant Garamond', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom Fine Styling & Before/After Slider Styling */
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: #1e293b;
+        }
+        
+        h1, h2, h3, .font-heading {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Before-After Range Slider Custom Styles */
+        .ba-slider-container {
+            position: relative;
+            overflow: hidden;
+            user-select: none;
+        }
+        .ba-slider-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 50%;
+            overflow: hidden;
+        }
+        .ba-slider-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            cursor: ew-resize;
+            transform: translateX(-50%);
+            z-index: 20;
+        }
+        .ba-slider-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #0f2c59;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            box-shadow: 0 4px 12px rgba(15, 44, 89, 0.3);
+            border: 2px solid #ffffff;
+        }
+
+        /* Clean crisp borders */
+        .border-crisp {
+            border-color: #e2e8f0;
+        }
+
+        /* Subtle focus states */
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #0ea5e9;
+            box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.15);
+        }
+    </style>
+</head>
+<body class="antialiased bg-white text-slate-800">
+
+    <!-- TOP ANNOUNCEMENT / QUICK INFO BAR -->
+    <div class="bg-medical-900 text-white text-xs py-2 px-4 border-b border-medical-800">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-medical-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg> г. Москва, ул. Пречистенка, д. 24</span>
+                <span class="hidden md:flex items-center gap-2"><svg class="w-3.5 h-3.5 text-medical-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Пн-Сб: 09:00 - 21:00</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:+74950000000" class="hover:text-medical-500 transition-colors font-medium">+7 (495) 000-00-00</a>
+                <span class="hidden sm:inline text-slate-400">|</span>
+                <span class="hidden sm:inline text-medical-200">Премиальный сервис 24/7</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION (STICKY) -->
+    <header id="main-header" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-shadow duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- BRAND LOGO -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 border-2 border-medical-900 flex items-center justify-center font-heading text-2xl font-bold text-medical-900 group-hover:bg-medical-900 group-hover:text-white transition-all">
+                        L
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-heading text-2xl tracking-wider font-semibold text-medical-900 uppercase leading-none">Lumina</span>
+                        <span class="text-[10px] tracking-[0.25em] text-slate-500 uppercase font-medium mt-1">Dental Clinic</span>
+                    </div>
+                </a>
+
+                <!-- DESKTOP NAVIGATION -->
+                <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium tracking-wide text-slate-700">
+                    <a href="#services" class="hover:text-medical-900 transition-colors py-1">Услуги</a>
+                    <a href="#about" class="hover:text-medical-900 transition-colors py-1">О нас</a>
+                    <a href="#gallery" class="hover:text-medical-900 transition-colors py-1">Результаты</a>
+                    <a href="#prices" class="hover:text-medical-900 transition-colors py-1">Цены</a>
+                    <a href="#team" class="hover:text-medical-900 transition-colors py-1">Врачи</a>
+                    <a href="#faq" class="hover:text-medical-900 transition-colors py-1">FAQ</a>
+                </nav>
+
+                <!-- HEADER RIGHT ACTION -->
+                <div class="hidden sm:flex items-center space-x-6">
+                    <a href="#contact" class="bg-medical-900 hover:bg-medical-800 text-white text-xs font-semibold uppercase tracking-widest px-6 py-3 rounded-none transition-all duration-200 shadow-sm border border-medical-900">
+                        Записаться на прием
+                    </a>
+                </div>
+
+                <!-- MOBILE MENU BUTTON -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU CONTAINER -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 text-sm">
+            <a href="#services" class="block py-2 text-slate-800 font-medium hover:text-medical-500 border-b border-slate-100">Услуги</a>
+            <a href="#about" class="block py-2 text-slate-800 font-medium hover:text-medical-500 border-b border-slate-100">О нас</a>
+            <a href="#gallery" class="block py-2 text-slate-800 font-medium hover:text-medical-500 border-b border-slate-100">Результаты</a>
+            <a href="#prices" class="block py-2 text-slate-800 font-medium hover:text-medical-500 border-b border-slate-100">Цены</a>
+            <a href="#team" class="block py-2 text-slate-800 font-medium hover:text-medical-500 border-b border-slate-100">Врачи</a>
+            <a href="#faq" class="block py-2 text-slate-800 font-medium hover:text-medical-500 border-b border-slate-100">FAQ</a>
+            <div class="pt-2">
+                <a href="#contact" class="block text-center bg-medical-900 text-white text-xs uppercase font-semibold tracking-widest py-3">
+                    Записаться на прием
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-medical-50 py-16 lg:py-24 border-b border-slate-200 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- HERO TEXT CONTENT -->
+                <div class="lg:col-span-7 space-y-8">
+                    <div class="inline-flex items-center gap-3 bg-white px-3 py-1.5 border border-slate-200 text-xs font-semibold tracking-wider text-medical-900 uppercase">
+                        <span class="w-2 h-2 bg-medical-500 rounded-full"></span>
+                        Швейцарские стандарты лечения
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-normal text-medical-900 leading-[1.15] tracking-tight">
+                        Инновационная эстетическая <br class="hidden sm:inline">
+                        <span class="italic font-light">стоматология</span> высокого класса
+                    </h1>
+
+                    <p class="text-slate-600 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
+                        Безупречное сочетание цифровых технологий 3D-моделирования, экспертной диагностики и безболезненных лечебных протоколов в самом центре Москвы.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                        <a href="#contact" class="inline-flex justify-center items-center bg-medical-900 hover:bg-medical-800 text-white text-xs uppercase font-semibold tracking-widest px-8 py-4 transition-all duration-200 shadow-sm">
+                            Консультация эксперта
+                        </a>
+                        <a href="#gallery" class="inline-flex justify-center items-center bg-white hover:bg-slate-50 text-slate-800 text-xs uppercase font-semibold tracking-widest px-8 py-4 border border-slate-300 transition-all duration-200">
+                            Смотреть работы
+                        </a>
+                    </div>
+
+                    <!-- HERO METRICS -->
+                    <div class="grid grid-cols-3 gap-6 pt-8 border-t border-slate-200/80">
+                        <div>
+                            <div class="font-heading text-3xl lg:text-4xl font-normal text-medical-900">15+</div>
+                            <div class="text-xs text-slate-500 uppercase tracking-wider mt-1">Лет безупречного опыта</div>
+                        </div>
+                        <div>
+                            <div class="font-heading text-3xl lg:text-4xl font-normal text-medical-900">10k+</div>
+                            <div class="text-xs text-slate-500 uppercase tracking-wider mt-1">Счастливых пациентов</div>
+                        </div>
+                        <div>
+                            <div class="font-heading text-3xl lg:text-4xl font-normal text-medical-900">100%</div>
+                            <div class="text-xs text-slate-500 uppercase tracking-wider mt-1">Гарантия на импланты</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HERO GRAPHIC / IMAGE -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="aspect-[4/5] bg-slate-200 overflow-hidden relative border border-slate-200 shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=80" 
+                                 alt="Интерьер Lumina Dental Clinic" 
+                                 class="w-full h-full object-cover"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/800x1000/0f2c59/ffffff?text=LUMINA+CLINIC';">
+                            <div class="absolute inset-0 bg-gradient-to-t from-medical-900/40 to-transparent"></div>
+                            
+                            <!-- Overlay Badge -->
+                            <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 border border-slate-200">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-medical-500/10 text-medical-500 flex items-center justify-center font-bold">
+                                        ✓
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-semibold text-medical-900 uppercase tracking-wider">Цифровой томограф Dentsply Sirona</p>
+                                        <p class="text-[11px] text-slate-500">Точность сканирования до 0.01 мм</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- УСЛУГИ / SERVICES -->
+    <section id="services" class="py-20 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-widest text-medical-500">Направления клиники</span>
+                    <h2 class="text-3xl sm:text-4xl font-normal text-medical-900 mt-2">Высокотехнологичные услуги</h2>
+                </div>
+                <p class="text-slate-500 text-sm max-w-md mt-4 md:mt-0 font-light">
+                    Применяем строго сертифицированные мировые материалы и стандарты немецкой и швейцарской медицины.
+                </p>
+            </div>
+
+            <!-- SERVICES GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service Card 1 -->
+                <div class="bg-white p-8 border border-slate-200 hover:border-medical-900 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-medical-50 text-medical-900 border border-slate-200 flex items-center justify-center font-heading text-xl font-bold mb-6 group-hover:bg-medical-900 group-hover:text-white transition-colors">
+                            01
+                        </div>
+                        <h3 class="text-2xl font-normal text-medical-900 mb-3">Дентальная Имплантация</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 font-light">
+                            Восстановление зубов за 1 день по протоколам All-on-4 / All-on-6 премиальными системами Straumann (Швейцария) и Nobel Biocare.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-500 mb-8">
+                            <li class="flex items-center gap-2"><span class="text-medical-500">•</span> Пожизненная гарантия</li>
+                            <li class="flex items-center gap-2"><span class="text-medical-500">•</span> Безболезненно под седацией</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-400">от 45 000 ₽</span>
+                        <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-medical-900 group-hover:text-medical-500 flex items-center gap-1 transition-colors">
+                            Записаться <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white p-8 border border-slate-200 hover:border-medical-900 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-medical-50 text-medical-900 border border-slate-200 flex items-center justify-center font-heading text-xl font-bold mb-6 group-hover:bg-medical-900 group-hover:text-white transition-colors">
+                            02
+                        </div>
+                        <h3 class="text-2xl font-normal text-medical-900 mb-3">Эстетические Виниры</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 font-light">
+                            Ультратонкие керамические виниры E-max. Создание голливудской улыбки без агрессивной обточки собственных зубов.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-500 mb-8">
+                            <li class="flex items-center gap-2"><span class="text-medical-500">•</span> 3D-примерка Smile Design</li>
+                            <li class="flex items-center gap-2"><span class="text-medical-500">•</span> Индивидуальная цветность</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-400">от 38 000 ₽</span>
+                        <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-medical-900 group-hover:text-medical-500 flex items-center gap-1 transition-colors">
+                            Записаться <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white p-8 border border-slate-200 hover:border-medical-900 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-medical-50 text-medical-900 border border-slate-200 flex items-center justify-center font-heading text-xl font-bold mb-6 group-hover:bg-medical-900 group-hover:text-white transition-colors">
+                            03
+                        </div>
+                        <h3 class="text-2xl font-normal text-medical-900 mb-3">Ортодонтия и Элайнеры</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 font-light">
+                            Исправление прикуса прозрачными элайнерами Invisalign и брекет-системами последнего поколения.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-500 mb-8">
+                            <li class="flex items-center gap-2"><span class="text-medical-500">•</span> Незаметны для окружающих</li>
+                            <li class="flex items-center gap-2"><span class="text-medical-500">•</span> Прогнозируемый результат</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-400">от 160 000 ₽</span>
+                        <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-medical-900 group-hover:text-medical-500 flex items-center gap-1 transition-colors">
+                            Записаться <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="bg-white p-8 border border-slate-200 hover:border-medical-900 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-medical-50 text-medical-900 border border-slate-200 flex items-center justify-center font-heading text-xl font-bold mb-6 group-hover:bg-medical-900 group-hover:text-white transition-colors">
+                            04
+                        </div>
+                        <h3 class="text-2xl font-normal text-medical-900 mb-3">Лечение под микроскопом</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 font-light">
+                            Лечение кариеса и каналов под оптическим микроскопом Leica. Сохраняем даже сложные зубы.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-500 mb-8">
+                            <li class="flex items-center gap-2"><span class="text-medical-500">•</span> Увеличение до 40 раз</li>
+                            <li class="flex items-center gap-2"><span class="text-medical-500">•</span> Ювелирная точность</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-400">от 8 500 ₽</span>
+                        <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-medical-900 group-hover:text-medical-500 flex items-center gap-1 transition-colors">
+                            Записаться <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="bg-white p-8 border border-slate-200 hover:border-medical-900 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-medical-50 text-medical-900 border border-slate-200 flex items-center justify-center font-heading text-xl font-bold mb-6 group-hover:bg-medical-900 group-hover:text-white transition-colors">
+                            05
+                        </div>
+                        <h3 class="text-2xl font-normal text-medical-900 mb-3">Гигиена & Отбеливание</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 font-light">
+                            Профессиональный комплекс GBT (AirFlow) и бережное отбеливание Zoom 4 до 8 тонов за 1 сеанс.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-500 mb-8">
+                            <li class="flex items-center gap-2"><span class="text-medical-500">•</span> Безопасно для эмали</li>
+                            <li class="flex items-center gap-2"><span class="text-medical-500">•</span> Долговечный блеск</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-400">от 12 000 ₽</span>
+                        <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-medical-900 group-hover:text-medical-500 flex items-center gap-1 transition-colors">
+                            Записаться <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="bg-white p-8 border border-slate-200 hover:border-medical-900 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-medical-50 text-medical-900 border border-slate-200 flex items-center justify-center font-heading text-xl font-bold mb-6 group-hover:bg-medical-900 group-hover:text-white transition-colors">
+                            06
+                        </div>
+                        <h3 class="text-2xl font-normal text-medical-900 mb-3">Хирургия & Костная пластика</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6 font-light">
+                            Атравматичное удаление зубов любой сложности, синус-лифтинг и наращивание костной ткани.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-500 mb-8">
+                            <li class="flex items-center gap-2"><span class="text-medical-500">•</span> Быстрая реабилитация</li>
+                            <li class="flex items-center gap-2"><span class="text-medical-500">•</span> Ультразвуковой скальпель</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-slate-400">от 9 000 ₽</span>
+                        <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-medical-900 group-hover:text-medical-500 flex items-center gap-1 transition-colors">
+                            Записаться <span>&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- О НАС / ABOUT US -->
+    <section id="about" class="py-20 bg-medical-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" 
+                             alt="Кабинет клиники" 
+                             class="w-full h-64 sm:h-80 object-cover border border-slate-200"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x800/0f2c59/ffffff?text=Equipment';">
+                        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80" 
+                             alt="Стоматолог за работой" 
+                             class="w-full h-64 sm:h-80 object-cover border border-slate-200 mt-8"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x800/0ea5e9/ffffff?text=Doctor';">
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-medical-500">Философия LUMINA</span>
+                    <h2 class="text-3xl sm:text-4xl font-normal text-medical-900 leading-tight">
+                        Переосмысление медицинской эстетики и вашего комфорта
+                    </h2>
+                    <p class="text-slate-600 text-sm leading-relaxed font-light">
+                        Клиника Lumina основана на концепции бескомпромиссного качества. Мы отказались от традиционного "больничного" восприятия в пользу атмоферы премиального спа-отеля, где каждая деталь подчинена вашему спокойствию.
+                    </p>
+                    
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-none bg-medical-900 text-white flex items-center justify-center shrink-0 text-xs font-bold">1</div>
+                            <div>
+                                <h4 class="text-base font-medium text-medical-900">Цифровой протокол Digital Smile Design</h4>
+                                <p class="text-xs text-slate-500 mt-1">Вы увидите и согласуете вашу будущую улыбку на 3D-модели еще до начала лечения.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-none bg-medical-900 text-white flex items-center justify-center shrink-0 text-xs font-bold">2</div>
+                            <div>
+                                <h4 class="text-base font-medium text-medical-900">Абсолютный антистресс и антиболь</h4>
+                                <p class="text-xs text-slate-500 mt-1">Применение компьютерной анестезии STA и возможность лечения во сне (под седацией).</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-6 h-6 rounded-none bg-medical-900 text-white flex items-center justify-center shrink-0 text-xs font-bold">3</div>
+                            <div>
+                                <h4 class="text-base font-medium text-medical-900">Гарантия юридической защиты</h4>
+                                <p class="text-xs text-slate-500 mt-1">Фиксированный прозрачный чек в договоре. Никаких скрытых платежей в процессе работы.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ДО И ПОСЛЕ / BEFORE & AFTER GALLERY -->
+    <section id="gallery" class="py-20 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-medical-500">Портфолио работ</span>
+                <h2 class="text-3xl sm:text-4xl font-normal text-medical-900 mt-2">Преображение улыбок</h2>
+                <p class="text-slate-500 text-sm mt-3 font-light">Потяните бегунок в центре фото, чтобы оценить результат эстетической реставрации.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- BEFORE/AFTER ITEM 1 -->
+                <div class="bg-medical-50 p-6 border border-slate-200">
+                    <div class="ba-slider-container aspect-[4/3] w-full border border-slate-300 relative select-none">
+                        <!-- AFTER IMAGE (Underneath) -->
+                        <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=1000&q=80" 
+                             alt="Улыбка ПОСЛЕ" 
+                             class="absolute inset-0 w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 bg-medical-900 text-white text-[10px] font-semibold tracking-widest px-3 py-1 z-10">ПОСЛЕ</span>
+
+                        <!-- BEFORE IMAGE (Overlay Clip) -->
+                        <div class="ba-slider-overlay">
+                            <img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&w=1000&q=80" 
+                                 alt="Улыбка ДО" 
+                                 class="absolute top-0 left-0 max-w-none h-full w-full object-cover"
+                                 id="before-img-1">
+                            <span class="absolute top-4 left-4 bg-slate-800 text-white text-[10px] font-semibold tracking-widest px-3 py-1">ДО</span>
+                        </div>
+
+                        <!-- HANDLE -->
+                        <div class="ba-slider-handle">
+                            <div class="ba-slider-button">↔</div>
+                        </div>
+
+                        <!-- INPUT RANGE -->
+                        <input type="range" min="0" max="100" value="50" class="absolute inset-0 opacity-0 cursor-ew-resize w-full h-full z-30 ba-range-input">
+                    </div>
+                    
+                    <div class="mt-6 flex justify-between items-center">
+                        <div>
+                            <h4 class="font-heading text-xl font-medium text-medical-900">Установка 8 E-max Виниров</h4>
+                            <p class="text-xs text-slate-500 mt-1">Устранение дисколорита и формы. Срок: 7 дней.</p>
+                        </div>
+                        <span class="text-xs font-semibold text-medical-800 border border-medical-200 bg-white px-3 py-1">Эстетика</span>
+                    </div>
+                </div>
+
+                <!-- BEFORE/AFTER ITEM 2 -->
+                <div class="bg-medical-50 p-6 border border-slate-200">
+                    <div class="ba-slider-container aspect-[4/3] w-full border border-slate-300 relative select-none">
+                        <!-- AFTER IMAGE -->
+                        <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1000&q=80" 
+                             alt="Улыбка ПОСЛЕ" 
+                             class="absolute inset-0 w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 bg-medical-900 text-white text-[10px] font-semibold tracking-widest px-3 py-1 z-10">ПОСЛЕ</span>
+
+                        <!-- BEFORE IMAGE -->
+                        <div class="ba-slider-overlay">
+                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=80" 
+                                 alt="Улыбка ДО" 
+                                 class="absolute top-0 left-0 max-w-none h-full w-full object-cover"
+                                 id="before-img-2">
+                            <span class="absolute top-4 left-4 bg-slate-800 text-white text-[10px] font-semibold tracking-widest px-3 py-1">ДО</span>
+                        </div>
+
+                        <!-- HANDLE -->
+                        <div class="ba-slider-handle">
+                            <div class="ba-slider-button">↔</div>
+                        </div>
+
+                        <!-- INPUT RANGE -->
+                        <input type="range" min="0" max="100" value="50" class="absolute inset-0 opacity-0 cursor-ew-resize w-full h-full z-30 ba-range-input">
+                    </div>
+                    
+                    <div class="mt-6 flex justify-between items-center">
+                        <div>
+                            <h4 class="font-heading text-xl font-medium text-medical-900">Комплексная Имплантация</h4>
+                            <p class="text-xs text-slate-500 mt-1">Тотальное восстановление верхней челюсти.</p>
+                        </div>
+                        <span class="text-xs font-semibold text-medical-800 border border-medical-200 bg-white px-3 py-1">Имплантация</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ЦЕНЫ И КАК МЫ РАБОТАЕМ / PRICES & WORKFLOW -->
+    <section id="prices" class="py-20 bg-medical-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- SECTION HEADING -->
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-medical-500">Прозрачность и этапы</span>
+                <h2 class="text-3xl sm:text-4xl font-normal text-medical-900 mt-2">Цены и порядок работы</h2>
+                <p class="text-slate-500 text-sm mt-3 font-light">Честные цены без скрытых надбавок. Возможность оплаты в рассрочку 0%.</p>
+            </div>
+
+            <!-- WORKFLOW STEPS -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-20">
+                <div class="bg-white p-6 border border-slate-200 relative">
+                    <span class="text-xs font-bold text-medical-500 tracking-widest uppercase">Шаг 01</span>
+                    <h4 class="font-heading text-xl text-medical-900 mt-2 mb-2">3D-Диагностика</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">КТ-снимок, осмотр главой клиники и составление 2-3 вариантов плана лечения.</p>
+                </div>
+
+                <div class="bg-white p-6 border border-slate-200 relative">
+                    <span class="text-xs font-bold text-medical-500 tracking-widest uppercase">Шаг 02</span>
+                    <h4 class="font-heading text-xl text-medical-900 mt-2 mb-2">Согласование</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Фиксация стоимости в договоре. Цифровая 3D-моделировка результата.</p>
+                </div>
+
+                <div class="bg-white p-6 border border-slate-200 relative">
+                    <span class="text-xs font-bold text-medical-500 tracking-widest uppercase">Шаг 03</span>
+                    <h4 class="font-heading text-xl text-medical-900 mt-2 mb-2">Лечение</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Абсолютно безболезненное проведение процедур в комфортном кресле.</p>
+                </div>
+
+                <div class="bg-white p-6 border border-slate-200 relative">
+                    <span class="text-xs font-bold text-medical-500 tracking-widest uppercase">Шаг 04</span>
+                    <h4 class="font-heading text-xl text-medical-900 mt-2 mb-2">Гарантия</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Выдача гарантийного паспорта и плановые бесплатные осмотры 2 раза в год.</p>
+                </div>
+            </div>
+
+            <!-- PRICING TABLE CATALOG -->
+            <div class="bg-white border border-slate-200 overflow-hidden">
+                <div class="p-6 bg-medical-900 text-white flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div>
+                        <h3 class="font-heading text-2xl font-normal">Прайс-лист на популярные услуги</h3>
+                        <p class="text-xs text-slate-300 font-light mt-1">Цены указаны "под ключ" с учетом анестезии и материалов</p>
+                    </div>
+                    <a href="#contact" class="bg-white text-medical-900 hover:bg-slate-100 text-xs font-semibold uppercase tracking-widest px-5 py-2.5 transition-colors">
+                        Получить смету
+                    </a>
+                </div>
+
+                <div class="divide-y divide-slate-200">
+                    <div class="p-4 sm:p-6 flex justify-between items-center hover:bg-slate-50 transition-colors">
+                        <div>
+                            <h5 class="text-sm font-semibold text-medical-900">Первичная консультация врача-стоматолога + КТ диагностика</h5>
+                            <p class="text-xs text-slate-500">Полный осмотр, составление плана лечения, фотопротокол</p>
+                        </div>
+                        <span class="text-sm font-bold text-medical-900 whitespace-nowrap ml-4">3 500 ₽</span>
+                    </div>
+
+                    <div class="p-4 sm:p-6 flex justify-between items-center hover:bg-slate-50 transition-colors">
+                        <div>
+                            <h5 class="text-sm font-semibold text-medical-900">Имплантат Straumann SLA (Швейцария)</h5>
+                            <p class="text-xs text-slate-500">Установка имплантата + пожизненная гарантия производителя</p>
+                        </div>
+                        <span class="text-sm font-bold text-medical-900 whitespace-nowrap ml-4">55 000 ₽</span>
+                    </div>
+
+                    <div class="p-4 sm:p-6 flex justify-between items-center hover:bg-slate-50 transition-colors">
+                        <div>
+                            <h5 class="text-sm font-semibold text-medical-900">Керамический винир E-max (Премиум)</h5>
+                            <p class="text-xs text-slate-500">Изготовление, примерка, фиксация на адгезив немецкого производства</p>
+                        </div>
+                        <span class="text-sm font-bold text-medical-900 whitespace-nowrap ml-4">42 000 ₽</span>
+                    </div>
+
+                    <div class="p-4 sm:p-6 flex justify-between items-center hover:bg-slate-50 transition-colors">
+                        <div>
+                            <h5 class="text-sm font-semibold text-medical-900">Профессиональная гигиена по протоколу GBT</h5>
+                            <p class="text-xs text-slate-500">Ультразвук + AirFlow + полировка + фторирование</p>
+                        </div>
+                        <span class="text-sm font-bold text-medical-900 whitespace-nowrap ml-4">12 500 ₽</span>
+                    </div>
+
+                    <div class="p-4 sm:p-6 flex justify-between items-center hover:bg-slate-50 transition-colors">
+                        <div>
+                            <h5 class="text-sm font-semibold text-medical-900">Отбеливание системой ZOOM 4 (США)</h5>
+                            <p class="text-xs text-slate-500">Полный курс отбеливания в кресле + домашний набор изоляции</p>
+                        </div>
+                        <span class="text-sm font-bold text-medical-900 whitespace-nowrap ml-4">32 000 ₽</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- НАШ ПЕРСОНАЛ / TEAM -->
+    <section id="team" class="py-20 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-medical-500">Эксперты клиники</span>
+                <h2 class="text-3xl sm:text-4xl font-normal text-medical-900 mt-2">Врачи высокой квалификации</h2>
+                <p class="text-slate-500 text-sm mt-3 font-light">Наши врачи регулярно проходят стажировки в клиниках Германии, Швейцарии и США.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- DOCTOR 1 -->
+                <div class="border border-slate-200 bg-white group hover:border-medical-900 transition-all">
+                    <div class="aspect-[3/4] bg-slate-100 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80" 
+                             alt="Д-р Александр Волков" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x800/0f2c59/ffffff?text=Doctor+Photo';">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[11px] font-semibold tracking-wider text-medical-500 uppercase">Главный врач • Хирург-имплантолог</span>
+                        <h3 class="font-heading text-2xl font-normal text-medical-900 mt-1">Д-р Александр Волков</h3>
+                        <p class="text-xs text-slate-500 mt-2 font-light">Стаж 18 лет. Более 4 000 успешных операций по имплантации и костной пластике.</p>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center">
+                            <span class="text-[11px] text-slate-400">Стажировка: Цюрих, Швейцария</span>
+                            <a href="#contact" class="text-xs font-bold text-medical-900 uppercase tracking-wider hover:text-medical-500">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DOCTOR 2 -->
+                <div class="border border-slate-200 bg-white group hover:border-medical-900 transition-all">
+                    <div class="aspect-[3/4] bg-slate-100 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1594824813566-78a0113f3661?auto=format&fit=crop&w=800&q=80" 
+                             alt="Д-р Елена Орлова" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x800/0ea5e9/ffffff?text=Doctor+Photo';">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[11px] font-semibold tracking-wider text-medical-500 uppercase">Стоматолог-ортопед • Эстетист</span>
+                        <h3 class="font-heading text-2xl font-normal text-medical-900 mt-1">Д-р Елена Орлова</h3>
+                        <p class="text-xs text-slate-500 mt-2 font-light">Стаж 12 лет. Специализируется на тотальных микропротезированиях и винирах.</p>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center">
+                            <span class="text-[11px] text-slate-400">Стажировка: Мюнхен, Германия</span>
+                            <a href="#contact" class="text-xs font-bold text-medical-900 uppercase tracking-wider hover:text-medical-500">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DOCTOR 3 -->
+                <div class="border border-slate-200 bg-white group hover:border-medical-900 transition-all">
+                    <div class="aspect-[3/4] bg-slate-100 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=800&q=80" 
+                             alt="Д-р Михаил Соколов" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x800/0f2c59/ffffff?text=Doctor+Photo';">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-[11px] font-semibold tracking-wider text-medical-500 uppercase">Врач-ортодонт</span>
+                        <h3 class="font-heading text-2xl font-normal text-medical-900 mt-1">Д-р Михаил Соколов</h3>
+                        <p class="text-xs text-slate-500 mt-2 font-light">Стаж 10 лет. Сертифицированный эксперт по лечению прозрачными системами Invisalign.</p>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center">
+                            <span class="text-[11px] text-slate-400">Стажировка: Бостон, США</span>
+                            <a href="#contact" class="text-xs font-bold text-medical-900 uppercase tracking-wider hover:text-medical-500">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ / ЧЗВ SECTION -->
+    <section id="faq" class="py-20 bg-medical-50 border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-medical-500">Вопросы и ответы</span>
+                <h2 class="text-3xl sm:text-4xl font-normal text-medical-900 mt-2">Часто задаваемые вопросы</h2>
+            </div>
+
+            <!-- ACCORDION CONTAINER -->
+            <div class="space-y-4" id="faq-accordion">
+                
+                <!-- FAQ Item 1 -->
+                <div class="border border-slate-200 bg-white">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="font-heading text-xl text-medical-900">Больно ли устанавливать имплантаты?</span>
+                        <span class="text-slate-400 text-xl font-light transform transition-transform duration-200 faq-icon">+</span>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-slate-600 font-light leading-relaxed border-t border-slate-100 pt-4">
+                        Процедура абсолютно безболезненна. Мы используем современной локальной компьютерной анестезией STA, которая исключает неприятные ощущения даже в момент самого укола. По желанию пациента лечение проводится в состоянии седации (медикаментозного сна).
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-slate-200 bg-white">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="font-heading text-xl text-medical-900">Какая гарантия предоставляется на услуги?</span>
+                        <span class="text-slate-400 text-xl font-light transform transition-transform duration-200 faq-icon">+</span>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-slate-600 font-light leading-relaxed border-t border-slate-100 pt-4">
+                        На имплантаты производителей Straumann и Nobel Biocare действует бессрочная международная пожизненная гарантия. На терапевтическое лечение и эстетические виниры мы даем официальную гарантию по договору 5 лет.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-slate-200 bg-white">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="font-heading text-xl text-medical-900">Предоставляется ли рассрочка на ортодонтию или виниры?</span>
+                        <span class="text-slate-400 text-xl font-light transform transition-transform duration-200 faq-icon">+</span>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-slate-600 font-light leading-relaxed border-t border-slate-100 pt-4">
+                        Да, в нашей клинике доступна беспроцентная рассрочка от клиники на срок до 24 месяцев. Первый взнос составляет 20%, остальная сумма разбивается на равные ежемесячные платежи без переплат и процентов.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-slate-200 bg-white">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span class="font-heading text-xl text-medical-900">Сколько времени занимает установка виниров?</span>
+                        <span class="text-slate-400 text-xl font-light transform transition-transform duration-200 faq-icon">+</span>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-slate-600 font-light leading-relaxed border-t border-slate-100 pt-4">
+                        Обычно весь процесс занимает от 7 до 10 дней и требует 2-3 визитов. На первом визите проводится 3D-сканирование и обработка зубов, на период изготовления вы носите временные виниры. На втором визите выполняется постоянная фиксация.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ОБРАТНАЯ СВЯЗЬ / BOOKING FORM -->
+    <section id="contact" class="py-20 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border border-slate-200 bg-medical-50">
+                
+                <!-- CONTACT INFO SIDE -->
+                <div class="lg:col-span-5 bg-medical-900 text-white p-8 sm:p-12 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-widest text-medical-500">Запись на прием</span>
+                        <h2 class="text-3xl font-normal mt-2 leading-tight">Начните путь к идеальной улыбке</h2>
+                        <p class="text-slate-300 text-xs mt-4 font-light leading-relaxed">
+                            Оставьте ваши контакты. Наш администратор свяжется с вами в течение 5 минут для выбора удобного времени первичной консультации.
+                        </p>
+
+                        <div class="space-y-6 mt-10">
+                            <div class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-medical-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h32a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm0 8a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-2 2H5a2 2 0 01-2-2v-3zm12-8a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-2 2h-3a2 2 0 01-2-2V5zm0 8a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-2 2h-3a2 2 0 01-2-2v-3z"/></svg>
+                                <div>
+                                    <h5 class="text-xs uppercase font-semibold text-slate-400 tracking-wider">Телефон клиники</h5>
+                                    <p class="text-sm font-medium mt-0.5">+7 (495) 000-00-00</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <svg class="w-5 h-5 text-medical-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                <div>
+                                    <h5 class="text-xs uppercase font-semibold text-slate-400 tracking-wider">Адрес премиум-центра</h5>
+                                    <p class="text-sm font-medium mt-0.5">г. Москва, ул. Пречистенка, д. 24</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-8 border-t border-medical-800 text-[11px] text-slate-400">
+                        Конфиденциальность персональных данных гарантируется.
+                    </div>
+                </div>
+
+                <!-- FORM SIDE -->
+                <div class="lg:col-span-7 p-8 sm:p-12 bg-white">
+                    <form id="booking-form" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Ваше имя *</label>
+                                <input type="text" required placeholder="Константин" class="w-full px-4 py-3 border border-slate-300 text-sm bg-white">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Номер телефона *</label>
+                                <input type="tel" required placeholder="+7 (999) 000-00-00" class="w-full px-4 py-3 border border-slate-300 text-sm bg-white">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Интересующая услуга</label>
+                                <select class="w-full px-4 py-3 border border-slate-300 text-sm bg-white text-slate-700">
+                                    <option>Консультация и 3D диагностика</option>
+                                    <option>Имплантация зубов</option>
+                                    <option>Эстетическая установка виниров</option>
+                                    <option>Ортодонтия (Исправление прикуса)</option>
+                                    <option>Лечение под микроскопом</option>
+                                    <option>Гигиена и отбеливание</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Желаемая дата</label>
+                                <input type="date" class="w-full px-4 py-3 border border-slate-300 text-sm bg-white text-slate-700">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Дополнительные пожелания</label>
+                            <textarea rows="3" placeholder="Укажите особые пожелания или симптомы..." class="w-full px-4 py-3 border border-slate-300 text-sm bg-white"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-medical-900 hover:bg-medical-800 text-white text-xs font-semibold uppercase tracking-widest py-4 transition-colors">
+                            Отправить заявку на прием
+                        </button>
+
+                        <p class="text-[11px] text-slate-400 text-center">
+                            Нажимая кнопку, вы даете согласие на обработку персональных данных в соответствии с политикой конфиденциальности.
+                        </p>
+                    </form>
+
+                    <!-- FORM SUCCESS MESSAGE CONTAINER -->
+                    <div id="form-success" class="hidden p-8 bg-medical-50 border border-medical-500 text-center">
+                        <div class="w-12 h-12 bg-medical-900 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">✓</div>
+                        <h4 class="font-heading text-2xl font-normal text-medical-900">Заявка успешно принята!</h4>
+                        <p class="text-xs text-slate-600 mt-2">Наш персональный координатор свяжется с вами в ближайшее время для подтверждения записи.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-medical-dark text-white pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+                
+                <!-- FOOTER BRAND -->
+                <div class="space-y-4">
+                    <a href="#" class="flex items-center gap-3">
+                        <div class="w-8 h-8 border border-white flex items-center justify-center font-heading text-xl font-bold text-white">
+                            L
+                        </div>
+                        <span class="font-heading text-xl tracking-wider font-semibold uppercase">Lumina Dental</span>
+                    </a>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        Премиальная цифровой стоматологический центр в Москве. Качество без компромиссов.
+                    </p>
+                </div>
+
+                <!-- FOOTER LINKS 1 -->
+                <div>
+                    <h5 class="text-xs uppercase font-semibold text-slate-300 tracking-widest mb-4">Навигация</h5>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><a href="#services" class="hover:text-white transition-colors">Услуги клиники</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">О нас и технологии</a></li>
+                        <li><a href="#gallery" class="hover:text-white transition-colors">Портфолио до/после</a></li>
+                        <li><a href="#prices" class="hover:text-white transition-colors">Цены и прайс</a></li>
+                    </ul>
+                </div>
+
+                <!-- FOOTER LINKS 2 -->
+                <div>
+                    <h5 class="text-xs uppercase font-semibold text-slate-300 tracking-widest mb-4">Услуги</h5>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><a href="#services" class="hover:text-white transition-colors">Имплантация All-on-4</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Керамические виниры</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Элайнеры Invisalign</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Лечение под микроскопом</a></li>
+                    </ul>
+                </div>
+
+                <!-- FOOTER CONTACTS -->
+                <div>
+                    <h5 class="text-xs uppercase font-semibold text-slate-300 tracking-widest mb-4">Контакты</h5>
+                    <div class="space-y-2 text-xs text-slate-400">
+                        <p>+7 (495) 000-00-00</p>
+                        <p>info@luminadental.ru</p>
+                        <p>Пн-Сб: 09:00 — 21:00</p>
+                        <p class="text-slate-500 pt-2">Лицензия № ЛО-77-01-021458</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500 gap-4">
+                <p>© 2026 Lumina Dental Clinic. Все права защищены.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-slate-400">Политика конфиденциальности</a>
+                    <a href="#" class="hover:text-slate-400">Правовая информация</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. STICKY HEADER SHADOW ON SCROLL
+            const header = document.getElementById('main-header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    header.classList.add('shadow-md');
+                } else {
+                    header.classList.remove('shadow-md');
+                }
+            });
+
+            // 2. MOBILE MENU TOGGLE
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu on link click
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // 3. BEFORE / AFTER RANGE SLIDER INTERACTION
+            const sliderContainers = document.querySelectorAll('.ba-slider-container');
+            
+            sliderContainers.forEach(container => {
+                const rangeInput = container.querySelector('.ba-range-input');
+                const overlay = container.querySelector('.ba-slider-overlay');
+                const handle = container.querySelector('.ba-slider-handle');
+
+                if (rangeInput && overlay && handle) {
+                    rangeInput.addEventListener('input', (e) => {
+                        const value = e.target.value;
+                        overlay.style.width = `${value}%`;
+                        handle.style.left = `${value}%`;
+                    });
+                }
+            });
+
+            // 4. FAQ ACCORDION LOGIC
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('.faq-icon');
+                    
+                    // Toggle visibility
+                    const isHidden = content.classList.contains('hidden');
+                    
+                    // Close all other accordion items for clean look
+                    document.querySelectorAll('#faq-accordion > div').forEach(item => {
+                        item.querySelector('.faq-toggle + div').classList.add('hidden');
+                        item.querySelector('.faq-icon').textContent = '+';
+                    });
+
+                    if (isHidden) {
+                        content.classList.remove('hidden');
+                        icon.textContent = '−';
+                    }
+                });
+            });
+
+            // 5. BOOKING FORM SUBMISSION (MOCK INTERACTION)
+            const bookingForm = document.getElementById('booking-form');
+            const formSuccess = document.getElementById('form-success');
+
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    bookingForm.classList.add('hidden');
+                    formSuccess.classList.remove('hidden');
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>
